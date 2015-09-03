@@ -8,39 +8,48 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import learning.java.hibernate.app.withoutIDE.PanCardDetails;
 
 /**
  *
  * @author sivakumar
  */
-@Entity
-@Table(name="employee")
 public class Employee {
-    @Id
-private int id;
-    @Column(name = "fname")
-private String firstName;
-    @Column(name = "sname")
-private String lastName;
 
-public int getId() {
-    return id;
-}
-public void setId(int id) {
-    this.id = id;
-}
-public String getFirstName() {
-    return firstName;
-}
-public void setFirstName(String firstName) {
-    this.firstName = firstName;
-}
-public String getLastName() {
-    return lastName;
-}
-public void setLastName(String lastName) {
-    this.lastName = lastName;
-}
+    private int id;
+    private String firstName;
+    private String lastName;
+    private PanCardDetails panCardDetails;
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public PanCardDetails getPanCardDetails() {
+        return panCardDetails;
+    }
+
+    public void setPanCardDetails(PanCardDetails panCardDetails) {
+        this.panCardDetails = panCardDetails;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }

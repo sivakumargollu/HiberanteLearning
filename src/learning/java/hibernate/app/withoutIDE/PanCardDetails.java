@@ -8,24 +8,40 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import learning.java.hibernate.app.withoutIDE.Employee;
 
 /**
- *pan_card_details
+ * pan_card_details
+ *
  * @author sivakumar
  */
 public class PanCardDetails {
 
-        int emp_id;
-        Date issue_date;
-        String panNo;
+    int id;
+    Date issue_date;
+    String panNo;
+    Employee employee;
 
-    public int getEmp_id() {
-        return emp_id;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public void setEmp_id(int emp_id) {
-        this.emp_id = emp_id;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
+
+
+    public PanCardDetails() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 
     public Date getIssue_date() {
         return issue_date;
@@ -42,5 +58,4 @@ public class PanCardDetails {
     public void setPanNo(String panNo) {
         this.panNo = panNo;
     }
-        
 }

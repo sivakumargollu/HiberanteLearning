@@ -8,7 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import learning.java.hibernate.app.withoutIDE.Employee1;
+import learning.java.hibernate.app.withoutIDE.Employee;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
@@ -24,13 +24,16 @@ public class SimpleInsert {
         Session session = sf.openSession();
         Transaction trs = session.beginTransaction();
         Employee emp = new Employee();
-        emp.setId(12);
-        emp.setFirstName("Simple");
+        PanCardDetails panCardDetails = new PanCardDetails();
+        panCardDetails.setPanNo("BIXBG2640E");
+        emp.setFirstName("TESTTEST");
         emp.setLastName("Configuration");
-        session.update(emp);
+        emp.setPanCardDetails(panCardDetails);
+        panCardDetails.setEmployee(emp);
+
+        session.save(emp);
         trs.commit();
         session.close();
         System.out.println("Successfully save!!!!");
     }
-
 }

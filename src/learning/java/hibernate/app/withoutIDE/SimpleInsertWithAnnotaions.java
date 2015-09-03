@@ -8,7 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import learning.java.hibernate.app.withoutIDE.Employee;
+import learning.java.hibernate.app.withoutIDE.Employee2;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
@@ -23,7 +23,7 @@ public class SimpleInsertWithAnnotaions {
         SessionFactory sf = cfg.buildSessionFactory();
         Session session = sf.openSession();
         Transaction trs = session.beginTransaction();
-        Employee emp = new Employee();
+        Employee2 emp = new Employee2();
         emp.setId(12);
         emp.setFirstName("Annotaions");
         emp.setLastName("Configuration");
