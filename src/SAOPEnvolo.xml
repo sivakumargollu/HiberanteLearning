@@ -1,0 +1,15 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Header/>
+    <S:Body>
+        <ns2:reciveRequest xmlns:ns2="http://soapimplementations.java.practice/">
+            <xmlRQ></xmlRQ>
+        </ns2:reciveRequest>
+    </S:Body>
+</S:Envelope>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns2:reciveRequestResponse xmlns:ns2="http://soapimplementations.java.practice/">
+            <return>1000</return>
+        </ns2:reciveRequestResponse>
+    </S:Body>
+</S:Envelope>
