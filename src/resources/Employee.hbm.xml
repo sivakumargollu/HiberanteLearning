@@ -12,9 +12,10 @@
             <column name="fname"></column>
         </property>
         <property name="lastName">
-             <column name="sname"></column>
+            <column name="sname"></column>
         </property>
         <one-to-one name="PanCardDetails" class="learning.java.hibernate.app.withoutIDE.PanCardDetails"
-			cascade="save-update"></one-to-one>
+                    cascade="save-update">
+        </one-to-one>
     </class>
 </hibernate-mapping>
