@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="learning.java.hibernate.app.withoutIDE.PanCardDetails" catalog="test" table="pan_card_details">
+        <id name="id"  type="java.lang.Integer">
+            <generator class="foreign">
+                <param name="property">employee</param>
+            </generator>
+        </id>
+        <one-to-one name="employee" class="learning.java.hibernate.app.withoutIDE.Employee"
+                    constrained="true">
+        </one-to-one>
+        <property name="panNo">
+            <column name="pan_no"></column>
+        </property>
+        <property name="issue_date">
+            <column name="issue_date">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
