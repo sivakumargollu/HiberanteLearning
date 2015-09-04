@@ -13,5 +13,6 @@
         <property name="hibernate.format_sql">true</property>
         <mapping resource="resources/Employee.hbm.xml"/>
         <mapping resource="resources/PanCardDetails.hbm.xml" />
+        <mapping resource="resources/EmployeeAttendence.hbm.xml" />
     </session-factory>
 </hibernate-configuration>

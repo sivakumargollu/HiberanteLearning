@@ -4,6 +4,8 @@
  */
 package learning.java.hibernate.app.withoutIDE;
 
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -20,11 +22,21 @@ public class Employee {
     private String firstName;
     private String lastName;
     private PanCardDetails panCardDetails;
-
+    private Set<EmployeeAttendence> dailyAttendence = new HashSet<EmployeeAttendence>();
+    
+    
     public int getId() {
         return id;
     }
 
+    public Set<EmployeeAttendence> getDailyAttendence() {
+        return dailyAttendence;
+    }
+
+    public void setDailyAttendence(Set<EmployeeAttendence> dailyAttendence) {
+        this.dailyAttendence = dailyAttendence;
+    }
+    
     public void setId(int id) {
         this.id = id;
     }
