@@ -11,12 +11,12 @@
         <one-to-one name="employee" class="learning.java.hibernate.app.withoutIDE.Employee"
                     constrained="true">
         </one-to-one>
+
         <property name="panNo">
             <column name="pan_no"></column>
         </property>
         <property name="issue_date">
-            <column name="issue_date">
-            </column>
+
         </property>
     </class>
 </hibernate-mapping>
