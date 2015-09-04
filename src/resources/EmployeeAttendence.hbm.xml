@@ -4,13 +4,16 @@
 <!-- Generated Aug 28, 2015 11:40:14 PM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="learning.java.hibernate.app.withoutIDE.EmployeeAttendence" table="emp_attendence" catalog="test">
-        <id name="id" type="java.lang.Integer" >
+        <id name="record_id" type="java.lang.Integer" >
             <column name="record_id"/>
             <generator class="identity"/>
         </id>
-        <many-to-one  name="employee" class="learning.java.hibernate.app.withoutIDE.Employee" fetch="select">
+        <property name="emp_id">
+            <column name="emp_id"></column>
+        </property><!--
+        <many-to-one name="employee" class="learning.java.hibernate.app.withoutIDE.Employee" fetch="select">
             <column name="id" not-null="true" />
-        </many-to-one>
+        </many-to-one>-->
         <property name="date" type="date">
             <column name="date" length="5" />
         </property>

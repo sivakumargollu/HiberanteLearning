@@ -8,6 +8,13 @@
             <column name="id"></column>
             <generator class="identity"></generator>
         </id>
+        <set name="dailyAttendence"
+             cascade="all">
+            <key>
+                <column name="emp_id" not-null="true" />
+            </key>
+            <one-to-many class="learning.java.hibernate.app.withoutIDE.EmployeeAttendence"  />
+        </set>
         <property name="firstName">
             <column name="fname"></column>
         </property>
@@ -17,12 +24,5 @@
         <one-to-one name="PanCardDetails" class="learning.java.hibernate.app.withoutIDE.PanCardDetails"
                     cascade="save-update">
         </one-to-one>
-        <set name="dailyAttendence" table="emp_attendence" 
-            inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="id" not-null="true" />
-            </key>
-            <one-to-many class="learning.java.hibernate.app.withoutIDE.EmployeeAttendence" />
-        </set>
     </class>
 </hibernate-mapping>

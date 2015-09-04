@@ -5,6 +5,7 @@
 package learning.java.hibernate.app.withoutIDE;
 
 import java.util.Date;
+import java.util.HashSet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -27,22 +28,19 @@ public class SimpleInsert {
         Transaction trs = session.beginTransaction();
         Employee emp = new Employee();
         PanCardDetails panCardDetails = new PanCardDetails();
-        EmployeeAttendence attendence= new EmployeeAttendence();
+        EmployeeAttendence attendence = new EmployeeAttendence();
         attendence.setInTime(new Date());
         attendence.setOutTime(new Date());
         attendence.setDate(new Date());
-        
-      //  panCardDetails.setPanNo("BIXBG2640E");
+        //  panCardDetails.setPanNo("BIXBG2640E");
         emp.setFirstName("TESTTEST");
         emp.setLastName("Configuration");
         //emp.setPanCardDetails(panCardDetails);
-       // panCardDetails.setEmployee(emp);
+        // panCardDetails.setEmployee(emp);
+        emp.getDailyAttendence().add(attendence);;
+        //attendence.setEmployee(emp);
         session.save(emp);
         trs.commit();
-        attendence.setEmployee(emp);
-        emp.getDailyAttendence().add(attendence);
-        
-        session.save(attendence);
         session.close();
         System.out.println("Successfully save!!!!");
     }
