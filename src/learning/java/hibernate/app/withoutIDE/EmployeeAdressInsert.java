@@ -34,17 +34,15 @@ public class EmployeeAdressInsert {
 //        employeeInfo.setEmp_id(5268);
 //        String sql = "from test.employee_info";
 //        Query  sq;
-        employeeInfo.setEmp_id(1);
-        EmployeeInfo get = (EmployeeInfo)session.get(Integer.class, employeeInfo);
-        System.out.println("emp ="+get);
-
+        employeeInfo.setId(100);
+        employeeInfo.setEmp_address_id(200000);
+        employeeInfo.setEmp_attend_id(50000);
         session.persist(employeeInfo);
         tr.commit();
-        session.close();
         System.out.println("Record inserted successfully!!!!!");
+        EmployeeInfo emp1 = (EmployeeInfo)session.get(EmployeeInfo.class, new Integer(100));
+        System.out.println(""+emp1.getEmp_address_id());
+
     }
 
-    private static EmployeeInfo EmployeeInfo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

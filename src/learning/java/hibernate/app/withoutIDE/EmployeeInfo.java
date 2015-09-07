@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class EmployeeInfo implements Serializable{
 
     int id;
-    int emp_id;
+
     int emp_address_id;
     int emp_attend_id;
 
@@ -28,13 +28,7 @@ public class EmployeeInfo implements Serializable{
     }
 
 
-    public int getEmp_id() {
-        return emp_id;
-    }
 
-    public void setEmp_id(int emp_id) {
-        this.emp_id = emp_id;
-    }
 
     public int getEmp_address_id() {
         return emp_address_id;
@@ -54,10 +48,10 @@ public class EmployeeInfo implements Serializable{
 
     @Override
     public String toString() {
-        return "EmployeeInfo{" + "id=" + id + ", emp_id=" + emp_id + ", emp_address_id=" + emp_address_id + ", emp_attend_id=" + emp_attend_id + '}';
+        return "EmployeeInfo{" + "id=" + id + ",  emp_address_id=" + emp_address_id + ", emp_attend_id=" + emp_attend_id + '}';
     }
 
 
-    
+
 
 }
