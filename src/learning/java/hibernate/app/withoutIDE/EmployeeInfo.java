@@ -6,12 +6,14 @@
 
 package learning.java.hibernate.app.withoutIDE;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Siva
  */
-public class EmployeeInfo {
-    
+public class EmployeeInfo implements Serializable{
+
     int id;
     int emp_id;
     int emp_address_id;
@@ -25,7 +27,7 @@ public class EmployeeInfo {
         this.id = id;
     }
 
-     
+
     public int getEmp_id() {
         return emp_id;
     }
@@ -49,7 +51,13 @@ public class EmployeeInfo {
     public void setEmp_attend_id(int emp_attend_id) {
         this.emp_attend_id = emp_attend_id;
     }
+
+    @Override
+    public String toString() {
+        return "EmployeeInfo{" + "id=" + id + ", emp_id=" + emp_id + ", emp_address_id=" + emp_address_id + ", emp_attend_id=" + emp_attend_id + '}';
+    }
+
+
     
-    
-    
+
 }
