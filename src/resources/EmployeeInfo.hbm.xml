@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="learning.java.hibernate.app.withoutIDE.EmployeeInfo" table="employee_info">
+        <id name="id" column="emp_id">
+            <generator class="native"></generator>
+        </id>
+        <property name="emp_id" column="emp_id"></property>
+        <property name="emp_address_id" column="emp_address_id"></property>
+        <property name="emp_attend_id" column="emp_attend_id"></property>
+    </class>
+</hibernate-mapping>

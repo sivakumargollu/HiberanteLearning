@@ -14,5 +14,7 @@
         <mapping resource="resources/Employee.hbm.xml"/>
         <mapping resource="resources/PanCardDetails.hbm.xml" />
         <mapping resource="resources/EmployeeAttendence.hbm.xml" />
+        <mapping resource="resources/EmployeeAdress.hbm.xml" />
+        <mapping resource="resources/EmployeeInfo.hbm.xml" />
     </session-factory>
 </hibernate-configuration>
